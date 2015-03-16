@@ -6,7 +6,7 @@ You have 2 hours for this exercise. It’s timed, and you need to focus to get a
 
 Fork, clone, and pull down this repo.
 
-When you are done with at least the minimum requirements, or if the time isup, push your code up, and issue a pull request against the source repo, so we may look at your code and give you feedback.
+When you are done with at least the minimum requirements, or if the time is up, push your code up, and issue a pull request against the source repo, so we may look at your code and give you feedback.
 
 This is open book and open google, but is not collaborative. You need to prove to yourselves that you can do the basics all on your own.
 
