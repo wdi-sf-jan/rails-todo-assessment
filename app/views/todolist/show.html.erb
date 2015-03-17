@@ -1,0 +1,15 @@
+<h1>Title: <%= @todolist.title %></h1>
+
+<%= params %>
+
+<%= @todoitems %>
+
+
+<ul>
+  <% @todoitems.each do |todoitem| %>
+  <li><%= todoitem.itemtitle %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Edit", edit_todolist_path(@todolist) %>
