@@ -1,0 +1,23 @@
+<h1>Edit this Item</h1>
+
+<% if @item.errors.any? %>
+<% @item.errors.full_messages.each do |error|%>
+  <%= error%>
+</p>
+<% end %>
+<% end %>
+
+<%= form_for ([@list, @item]) do |item| %>
+
+<p>
+  <%= item.label :thing %>
+  <%= item.text_field :thing %>
+</p>
+
+<%= item.submit %>
+
+<% end %>
+
+<%= link_to "HomePage", lists_path %>
+
+<%= link_to "Delete", list_path(@list), method: "delete" %>

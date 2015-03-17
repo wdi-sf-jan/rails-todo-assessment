@@ -1,0 +1,13 @@
+<h1>Here Are Your ToDo Lists</h1>
+
+<% @lists.each do |list| %>
+
+<p>
+  
+  <%= list.title %>
+  <%= link_to list.title, list_path(list) %>
+</p>
+
+<% end %>
+
+<%= link_to "Add a new list", new_list_path %>
