@@ -1,5 +1,5 @@
-<%= form_tag(@item, method: "post") do %>
- 
-  <%= text_field_tag(:name) %>
-  <%= submit_tag("create") %>
-<% end %>
+<%= form_for [@list, @item] do |i|%>
+
+<%= i.text_field :name, :placeholder => "name"%>
+<%= i.submit "submit" %>
+<% end%>

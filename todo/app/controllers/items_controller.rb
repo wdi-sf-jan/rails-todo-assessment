@@ -5,12 +5,12 @@ class ItemsController < ApplicationController
   end
 
   def new
+@list = Todolist.find(params[:list_id])
 @item = Item.new
   end
 
 def create
 @item = Item.create item_params
- 
 redirect_to list_items_path
 end
 
