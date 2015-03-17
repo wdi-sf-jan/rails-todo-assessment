@@ -2,9 +2,9 @@
 <ul>
   <% @todolists.each do |list| %>
   <li>
-    <p><%= link_to "#{list.name}", todolist_path(id: list.id) %></p>
-    <p><%= link_to "Edit", edit_todolist_path(id: list.id) %></p>
-    <p><%= button_to "Delete", todolist_path(id: list.id), method: :delete %></p>
+    <p><%= link_to(list.name, todolist_path(list)) %></p>
+    <p><%= link_to "Edit", edit_todolist_path(list) %></p>
+    <p><%= button_to "Delete", todolist_path(list), method: :delete %></p>
   </li>
   <% end %>
 </ul>
