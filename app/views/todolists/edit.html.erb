@@ -1,0 +1,9 @@
+<h1>Edit <%= @todolist.name %></h1>
+
+<%= form_for @todolist do |f| %>
+  
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,6 @@
+<h1>New Todo List</h1>
+<%= form_for Todolist.new do |f|%>
+  <%= f.label :name %>
+  <%= f.text_field :name%>
+<%= f.submit %>
+<% end %>

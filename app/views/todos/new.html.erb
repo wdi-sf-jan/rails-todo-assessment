@@ -1,0 +1,8 @@
+<h1>Add a Todo to <%= @todolist.name %></h1>
+
+<%= form_for [@todolist, Todo.new] do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+
+<%= f.submit %>
+<% end %>
