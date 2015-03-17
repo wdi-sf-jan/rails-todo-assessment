@@ -1,0 +1,11 @@
+<h1>Todolists#index</h1>
+<p>Find me in app/views/todolists/index.html.erb</p>
+
+<% @todolists.each do |x| %>
+<p><%=x.list_name  %>
+<%= link_to('More Info', todolist_path(x))%>
+<%= link_to('Edit', edit_todolist_path(x))%>
+<%= link_to('Delete',todolist_path(x), method: :delete)%></p>
+<% end %>
+
+<%= link_to "New", new_todolist_path %>

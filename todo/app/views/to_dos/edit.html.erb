@@ -1,0 +1,8 @@
+<h1>ToDos#edit</h1>
+<p>Find me in app/views/to_dos/edit.html.erb</p>
+
+<%= simple_form_for [@todolist, @todo ] do |f| %>
+  <%= f.input :todo_name %>
+  <%= f.input :todolist_id, :as => :hidden, :input_html => { :value => @todolist } %>
+  <%= f.button :submit %>
+<% end %>
