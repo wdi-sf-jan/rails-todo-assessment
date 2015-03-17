@@ -1,0 +1,15 @@
+<h1>List Index</h1>
+<!-- Find me in app/views/list/index.html.erb -->
+<h1>Todo Lists</h1>
+
+<ol>
+  <% @lists.each do |list| %>
+    <li>
+      <%= list.name %>
+      &nbsp;
+      <%= link_to "Edit", edit_list_path(list) %>
+    </li>
+  <% end %>
+</ol>
+
+<%= button_to "Add A New List", new_list_path %>
