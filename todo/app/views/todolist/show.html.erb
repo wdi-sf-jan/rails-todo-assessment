@@ -1,0 +1,14 @@
+<h1><%= @listTodo.listName %></h1>
+
+<ul>
+<% @tasks.each do |task| %>
+  <li>
+    <%= @task.item %>
+  </li>
+<% end %>
+</ul>
+
+<%= link_to "Edit", edit_listtodo_path %>
+<%= link_to "Delete", listtodo_path, :method => :delete %>
+
+<%= link_to "Back to Index", listtodo_path %>
