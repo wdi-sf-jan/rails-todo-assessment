@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   get '/', to: 'todos#index', as: 'root'
 
+  post '/create', to: 'todos#create', as: 'create'
+
+  delete '/delete', to: 'todos#destroy', as: 'delete'
+
   resources :todos
 
 #    Prefix Verb   URI Pattern               Controller#Action

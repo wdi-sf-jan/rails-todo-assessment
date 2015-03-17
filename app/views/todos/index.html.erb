@@ -1,9 +1,15 @@
 <h1>Todos#index</h1>
 <p>Find me in app/views/todos/index.html.erb</p>
 
+<div class="list">
 <% @todos.each do |todo| %>
-  <li><%= link_to todo.item, todo_path(todo) %></li>
+  <li>
+    <%= link_to todo.item, todo_path(todo) %>
+    <%= link_to "Edit", edit_todo_path(todo) %>
+    <%= link_to "Delete", todo_path(todo), method: :delete, id: "del", data: { confirm: "Are you sure?!"} %>
+  </li>
 <% end %>
+</div>
 
 <br>
 
