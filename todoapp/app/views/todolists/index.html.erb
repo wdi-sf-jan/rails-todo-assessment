@@ -1,0 +1,13 @@
+<h1>Todo list index</h1>
+
+
+<% @todolist.each do |todo| %>
+  <li>
+      <%= link_to todo.name, edit_todolist_path(todo) %>
+      <%= link_to "tasks", todolist_todos_path(todo) %>
+  </li>
+<% end %>
+
+
+<hr>
+<%= link_to "Add new Todo", new_todolist_path %>

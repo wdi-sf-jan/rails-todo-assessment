@@ -1,0 +1,10 @@
+<h1>Todolists edit</h1>
+
+<%= form_for @todolist do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name%>
+<%= f.submit "submit" %>
+<% end %>
+
+<hr>
+<%= link_to "delete", todolist_path(@todolist), method: "delete" %>
