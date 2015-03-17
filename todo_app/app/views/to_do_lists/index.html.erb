@@ -1,0 +1,4 @@
+<% @ToDoLists.each do |f| %>
+<%= f.name %>
+<%= link_to "This to do list", to_do_list_path(f) %>
+<% end %>

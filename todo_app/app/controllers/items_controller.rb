@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
 
 def index
   @items = Item.all
+  @items[1].to_do_list
 end
 def new
   @item = Item.new
@@ -38,7 +39,7 @@ end
 
 private
 def item_params
-  params.require(:item).permit(:id, :title, :content)
+  params.require(:item).permit(:title, :content)
 end
 
 

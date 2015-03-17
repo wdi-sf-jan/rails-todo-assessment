@@ -3,6 +3,7 @@
 <% @items.each do |item| %>
 <h2><%= item.title %></h2>
 <p><%= item.content %></p>
+<p><%= item.to_do_list %></p>
 <p><%= link_to "Show to-do", item_path(item) %>
 <% end %>
 <p>
