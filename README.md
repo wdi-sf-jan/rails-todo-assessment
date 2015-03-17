@@ -1,6 +1,14 @@
+# Ryan's comments
+
+I got stuck on passing a hidden field from a form_for.  Was trying to pass the todolist_id (foreign key) back with a new todoitem.  Through binding.pry, I could see that it was being returned correctly, however it was not getting save in the new @todoitem.todolist_id.
+
+Feels like I made this more complicated than necessary then got myself stuck in the mud.
+
+
+
 # Rails Todo App Assessment
 
-Your goal is to write a non-complex rails app to demonstrate what you’ve learned as individuals. 
+Your goal is to write a non-complex rails app to demonstrate what you’ve learned as individuals.
 
 You have 2 hours for this exercise. It’s timed, and you need to focus to get at least the minimum requirements finished.
 
@@ -21,4 +29,4 @@ Note: don’t overthink this. For example: there are no users - the todos are fo
 
 ## Bonus
 
-Implement as much of the app as possible as a single page app, with AJAX, and no page refreshes. 
+Implement as much of the app as possible as a single page app, with AJAX, and no page refreshes.
