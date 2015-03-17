@@ -1,0 +1,12 @@
+<h1>TodoList#new</h1>
+
+<%= form_for @todo_list, url:"/todo_list" do |f| %>
+<p>
+  <%= f.label :name  %>
+  <%= f.text.field :name, autofocus: true  %>
+
+</p>
+<p>
+  <%= f.submit "create"  %>
+</p>
+<% end  %>
