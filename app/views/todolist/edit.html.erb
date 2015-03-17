@@ -1,0 +1,8 @@
+<h1>Edit</h1>
+
+<%= form_for [@todolist] do |l| %>
+  <%= l.text_field :title %>
+  <%= l.submit %>
+  <% end %>
+
+<%= button_to "Delete", todolist_path(@todolist), :method => :delete %>
