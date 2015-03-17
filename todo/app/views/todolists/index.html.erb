@@ -3,6 +3,7 @@
 
 <% @todolists.each do |x| %>
 <p><%=x.list_name  %>
+<%= link_to('More Info', todolist_path(x))%>
 <%= link_to('Edit', edit_todolist_path(x))%>
 <%= link_to('Delete',todolist_path(x), method: :delete)%></p>
 <% end %>
