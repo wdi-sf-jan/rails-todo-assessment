@@ -1,0 +1,13 @@
+<h1>Your lists!</h1>
+<ul>
+
+<% @lists.each do |list| %>
+<div class="lists-index">
+  <li><%= link_to list.name, list_path(list)%> <%= button_to "X", list_path(list), :method => :delete %> <%=  %> </li>
+</div>
+<% end %>
+</ul>
+<%= form_for @list do |e|%>
+  <%= e.text_field :name, :placeholder => "List name", autofocus:true %>
+  <%= e.submit%>
+<% end %>
