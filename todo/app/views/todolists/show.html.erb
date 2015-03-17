@@ -1,0 +1,14 @@
+<p><%=@todolist.list_name  %></p>
+
+<p>list</p>
+<% @todolist.to_dos.each do |x|%>
+<p><%= x.todo_name %></p>
+<%= link_to('Edit', edit_todolist_to_do_path(x.todolist.id,x.id))%>
+<%= link_to('Delete',todolist_to_do_path(x.todolist.id,x.id), method: :delete)%></p>
+
+<% end %>
+
+
+<%= link_to "New Todo", "/todolists/#{params[:id]}/to_dos/new" %>
+
+
