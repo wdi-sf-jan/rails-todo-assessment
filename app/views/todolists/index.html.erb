@@ -1,0 +1,43 @@
+<div class="container">
+
+  <div class="row">
+    <div class ="col-md-2 col-md-offset-1">
+      <%=  link_to('Add new To-do list', new_todolist_path, {class: "btn btn-primary"}) %>
+    </div>
+  </div>
+
+  <h3 class = "text-center">To-do Lists</h3>
+  <br>
+
+  <% @todolists.each do |todolist| %>
+    <div class="row">
+      <div class ="col-md-10 col-md-offset-1">
+        <table class ="table table-striped">
+          <caption><%= todolist.title %></caption>
+          <tr>
+            <th>Item</th>
+            <th>Created at</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+          <% todolist.todoitems.each do |item| %>
+          <tr>
+            <td><%= item.content %></td>
+            <td><%= item.created_at %></td>
+            <td><%= link_to('Edit', edit_todoitem_path(item), {class: "btn-xs btn-info"})%></td>
+            <td><%= link_to('Delete', todoitem_path(item), method: :delete, class: "btn-xs btn-danger")%></td>
+          </tr>
+          <%end %>
+        </table>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class ="col-md-2 col-md-offset-1">
+        <%=  link_to('Add an item', new_todolist_todoitem_path(todolist), {class: "btn btn-primary"}) %>
+      </div>
+    </div>
+    <br><hr><br>
+  <% end %>
+
+</div>

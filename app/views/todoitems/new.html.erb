@@ -1,0 +1,9 @@
+<div class="container">
+
+  <%= form_for @todoitem, url: todolist_todoitems_path(@todolist) do |f| %>
+    <%= f.text_field :content %>
+    <%= hidden_field :todolist_id, {:value => "#{@todolist.id}"} %>
+    <%= f.submit "Add item" %>
+  <% end %>
+
+</div>
