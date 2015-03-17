@@ -1,0 +1,7 @@
+<h1>All Todo Lists</h1>
+
+<ul>
+  <% @lists.each do |list| %>
+  <li><%= last.name %> <%= link_to "show", list %> <%= link_to "delete", list_path(liist), method: :delete %></li>
+  <% end %>
+</ul>

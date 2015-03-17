@@ -1,0 +1,12 @@
+<h1><%= @list.name %></h1>
+
+<% if @items.any? %>
+<ul>
+<% @items.each do |item| %>
+<li><%= item.name %></li>
+<% end %>
+</ul>
+<% else %>
+<p>Please add items to your list <%= link_to "here", new_list_item(@list) %></p>
+<% end %>
+
