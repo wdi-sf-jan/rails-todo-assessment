@@ -1,0 +1,9 @@
+<h1>Edit this Todo: <%= @todo.task %></h1>
+<%= form_for @todo do |f|%>
+  <p><%= f.label :task %>
+  <%= f.text_field :task %></p>
+  <p><%= f.submit %> <!-- creates a submit form -->
+</p>
+<p><%= link_to "Delete this Todo!", todo_path(@todo), method: "DELETE", data: { confirm:"Are you sure?"}%> </p>
+
+<% end %>
