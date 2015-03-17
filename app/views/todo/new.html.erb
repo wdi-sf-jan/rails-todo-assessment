@@ -1,0 +1,15 @@
+<h1>Todo#new</h1>
+<p>Find me in app/views/todo/new.html.erb</p>
+
+<%= form_for @todo, url:"/todo_list/:id/todo" do |f| %>
+<p>
+  <%= f.label :task  %>
+  <%= f.text_field :task, autofocus: true  %>
+
+  <%= f.label :deadline  %>
+  <%= f.text_field :deadline %>
+</p>
+<p>
+  <%= f.submit "create"  %>
+</p>
+<% end  %>

@@ -1,0 +1,12 @@
+<h1>TodoList</h1>
+<p>Add/ show todolists here</p>
+
+<% @todo_lists.each do |list|  %>
+<ul>
+<li><%= list.name  %></li>
+</ul>
+<%= link_to list.name, show_list_path(todo_list) %>
+<% end  %>
+<hr>
+
+<%= link_to "add a new list", new_todo_list_path %>
