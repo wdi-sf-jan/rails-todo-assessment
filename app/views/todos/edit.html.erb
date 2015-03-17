@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add a ToDo</title>\
+<% end %>
+</head>
+<body>
+  <title>Fix this todo</title>
+  <%= form_for @todo, url: todo_path(@todo) do |f| %>
+  <%= f.label :task %>:
+  <%= f.text_field :task %><br/>
+  <%= f.submit %>
+<% end %>
+<%= link_to "Delete", todo_path(@todo), method: "Delete" %>
+</body>
+</html>

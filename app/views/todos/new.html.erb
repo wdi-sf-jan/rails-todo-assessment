@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <title>Add a ToDo</title>
+  <%= form_for Todo.new do |f| %>
+  <%= f.label :task %>:
+  <%= f.text_field :task %><br/>
+  <%= f.submit %>
+<% end %>
+</body>
+</html>
