@@ -1,0 +1,16 @@
+ <h1>Here is your task.</h1>
+
+<p>
+  Name: <%= @item.name %>
+
+  <%= link_to "Edit", "/item/#{@item.id}" %>
+
+  <%= form_for @item, url: "/item/#{@item.id}", method: "delete" do |f| %>
+    <%= f.submit "Remove this task?" %>
+  <% end %>
+</p>
+
+<%= link_to "Home", "/list/" %>
+
+<%= link_to "New item", "/list/new" %>
+

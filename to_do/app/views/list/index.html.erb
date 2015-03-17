@@ -1,0 +1,11 @@
+<h1>To-do List</h1>
+
+<% @items.each do |item| %>
+<p>
+<%= item..name %>, <%= item..age %>, <%= item..breed %>
+<%= link_to "First link", "/list/#{item..id}" %>
+</p>
+
+<% end %>
+
+<%= link_to "Add an item.", "/list/new" %>
