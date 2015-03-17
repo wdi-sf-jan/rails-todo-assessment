@@ -1,0 +1,11 @@
+<h1>Persons#new</h1>
+
+<%= form_for @person, url: persons_path, method: "POST" do |p| %>
+<%= p.label :name %>
+<%= p.text_field :name, placeholder: "Your Name", autofocus: true %>
+<%= p.label :email %>
+<%= p.text_field :email, placeholder: "Your Email" %>
+<%= p.label :age %>
+<%= p.text_field :age, placeholder: "Your Age (Don't Lie)" %>
+<%= p.submit "Create", class: "btn btn-primary" %>
+<% end %>

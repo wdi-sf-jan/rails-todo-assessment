@@ -1,0 +1,7 @@
+<h1>Persons#index</h1>
+
+<% @persons.each do |person| %>
+<p><%= link_to "#{person.name}", person_path %></p>
+<% end %>
+
+<%= link_to "Create a Profile", new_person_path %>
