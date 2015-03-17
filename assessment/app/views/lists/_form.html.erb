@@ -1,0 +1,12 @@
+<%= form_for(@list) do |l| %>
+
+  <div>
+    <%= l.label :name %>
+    <%= l.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= l.submit %>
+  </div>
+  
+<% end %>
