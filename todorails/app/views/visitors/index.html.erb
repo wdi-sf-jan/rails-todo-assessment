@@ -1,0 +1,13 @@
+<h1>Visitors#index</h1>
+<p>Find me in app/views/visitors/index.html.erb</p>
+<h2>hellooo</h2>
+<% @visitors.each do |visitor| %>
+<ul>
+<li><%= link_to visitor.name, visitor_path(visitor) %><span> </span><%= link_to "delete", visitor_path(visitor), method: :delete%>
+</li>
+
+</ul>
+<% end %>
+<p>
+  <%= link_to "Add a visitor", new_visitor_path,class: "btn btn-default btn-primary" %>
+</p>

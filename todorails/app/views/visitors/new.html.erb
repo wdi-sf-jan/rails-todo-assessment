@@ -1,0 +1,12 @@
+<h1>Visitors#new</h1>
+<p>Find me in app/views/visitors/new.html.erb</p>
+<h2>Add a new visitor</h2>
+<p>
+ <%= form_tag(visitors_path) do %>
+     <p>
+      <%= label_tag(:name) %>
+      <%= text_field_tag(:name) %>
+    </p>
+     <%= submit_tag "Add"%>
+  <% end %>
+</p>
