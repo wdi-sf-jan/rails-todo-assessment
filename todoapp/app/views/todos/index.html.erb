@@ -1,0 +1,14 @@
+<h1>Todos index</h1>
+
+
+<% @todos.each do |todo| %>
+  <li>
+      <%=  todo.description %>
+
+  </li>
+<% end %>
+
+
+<hr>
+<%= link_to "Add new Task", new_todolist_todo_path %>
+
