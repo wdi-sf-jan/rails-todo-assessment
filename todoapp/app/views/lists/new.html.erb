@@ -1,0 +1,21 @@
+<h1>Add A new List</h1>
+
+<% if @list.errors.any? %>
+<% @list.errors.full_messages.each do |error|%>
+
+  <%= error%>
+</p>
+<% end %>
+<% end %>
+
+<%= form_for @list do |list|  %>
+
+<p>
+  <%= list.label :title %>
+  <%= list.text_field :title %>
+
+</p>
+
+<%= list.submit %>
+
+<% end %>

@@ -1,0 +1,25 @@
+<h1>Edit this List</h1>
+
+<% if @list.errors.any? %>
+<% @list.errors.full_messages.each do |error|%>
+
+  <%= error%>
+</p>
+<% end %>
+<% end %>
+
+<%= form_for @list do |list|  %>
+
+<p>
+  <%= list.label :title %>
+  <%= list.text_field :title %>
+
+</p>
+
+<%= list.submit %>
+
+<% end %>
+
+<%= link_to "HomePage", lists_path %>
+
+<%= link_to "Delete", list_path(@list), method: "delete" %>

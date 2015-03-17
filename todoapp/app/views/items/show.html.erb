@@ -1,0 +1,6 @@
+<h1>The ToDo Item</h1>
+
+<p><%= @item.thing %></p>
+
+<%= link_to "Edit Item", edit_item_path(@item.id) %>
+<%= link_to "Back to All Items", list_items_path(@list.id) %>
