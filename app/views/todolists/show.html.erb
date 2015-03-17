@@ -6,10 +6,10 @@
   <%@todolist.todos.each do |todo| %>
   <li>
     <p><%= todo.content %></p>
-    <p><%= link_to "Edit", edit_todolist_todo_path(todolist_id: @todolist.id, id: todo.id) %></p>
-    <p><%= button_to "Delete", todolist_todo_path(todolist_id: @todolist.id, id: todo.id), method: :delete %></p>
+    <p><%= link_to "Edit", edit_todolist_todo_path(@todolist.id,todo.id) %></p>
+    <p><%= button_to "Delete", todolist_todo_path(@todolist.id,todo.id), method: :delete %></p>
   </li>
 </ul>
 <% end %>
 
-<%= link_to "New todo", new_todolist_todo_path(todolist_id: @todolist.id) %>
+<%= link_to "New todo", new_todolist_todo_path(@todolist.id) %>

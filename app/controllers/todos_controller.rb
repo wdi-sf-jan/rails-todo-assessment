@@ -6,7 +6,7 @@ class TodosController < ApplicationController
 
   def create
     @todolist.todos.create todo_params
-    redirect_to todolist_path(id: params[:todolist_id])
+    redirect_to todolist_path(@todolist)
   end
 
   def edit
@@ -14,12 +14,12 @@ class TodosController < ApplicationController
 
   def update
     @todo.update todo_params
-    redirect_to todolist_path(id: params[:todolist_id])
+    redirect_to todolist_path(@todolist)
   end
 
   def destroy
     Todo.destroy(params[:id])
-    redirect_to todolist_path(id: params[:todolist_id])
+    redirect_to todolist_path(@todolist)
   end
 
   private
