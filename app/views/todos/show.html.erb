@@ -1,0 +1,8 @@
+<h1>Todos#show</h1>
+<p>Find me in app/views/todos/show.html.erb</p>
+
+<%= @todo.item %>
+
+<%= link_to "Edit", edit_todo_path %>
+
+<%= link_to "Delete", todo_path, method: :delete, data: { confirm: "Are you sure?!"} %>
