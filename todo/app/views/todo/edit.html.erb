@@ -1,0 +1,10 @@
+<h1>Edit To-Do</h1>
+<%= form_for(@item, url: todo_index_path, method: "update") do |f|%>
+<p>
+<%= f.label :name %>
+
+
+</p>
+<%= f.submit("Submit") %>
+<% end %>
+
