@@ -1,0 +1,24 @@
+<h1>All Todos </h1>
+
+
+<%= form_tag todos_path do %>
+<%= label_tag :item %>
+<%= text_field_tag :item, nil, placeholder: "new item", autofocus: true  %>
+<%= submit_tag "add todo" %>
+
+<% end %>
+
+<p>
+  <%= button_to "Delete All", todos_path,  method: "delete" %>
+</p>
+
+<% @todos.each do |todo| %>
+
+
+<ul>
+  <li>
+    <h2><%= todo %></h2><%= button_to "Delete", delete_one_path(todo), method: "delete" %>
+  </li>
+</ul>
+
+<% end %>
