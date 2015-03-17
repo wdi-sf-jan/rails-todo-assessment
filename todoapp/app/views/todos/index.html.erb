@@ -1,0 +1,17 @@
+<h1>Here's your todos for today!</h1>
+<% @lists.each do |page| %>
+<h3><%= @lists.name %></h3>
+<ul>
+
+<% @todos.each do |todo| %>
+<div class="todos-index">
+  <li><%= link_to todo.name, todo_path(todo)%> <%= button_to "X", todo_path(todo), :method => :delete %> <%=  %> </li>
+</div>
+<% end %>
+</ul>
+<%= form_for @todo do |f| %>
+  <%= f.text_field :name, :placeholder => "Name", autofocus: true %>
+  <%= f.submit %>
+<% end %>
+<% end %>
+<%= link_to "Manage my lists!", lists_path %>
