@@ -1,0 +1,15 @@
+<h1>Edit <%= @todolist.title %></h1>
+
+<%= form_for @todolist do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, autofocus: true %>
+  </p>
+
+  <%= f.submit "Submit" %>
+<% end %>
+
+
+<p>
+  <%= link_to "Delete List", todolist_path, method: "DELETE" %>
+</p>

@@ -1,0 +1,13 @@
+<h1>Todo items for <%= @todolist.title %></h1>
+
+<ol>
+  <% @todolist.todos.each do |todo| %>
+    <li>
+      <%= link_to todo.item, todo_path(todo) %>
+    </li>
+  <% end %>
+</ol>
+
+<p>
+  <%= link_to "Add a todo", new_todolist_todo_path(@todolist) %>
+</p>
