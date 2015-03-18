@@ -1,2 +1,7 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<%= link_to "Home", lists_path %>
+
+<h1>Todo Item</h1>
+
+<h4><%= @item.name %>: </h4>
+<p><%= @item.desc %></p>
+<p><%= link_to "Edit Item", edit_item_path(@item) %> | <%= link_to "Delete", item_path(@item), method: :Delete, data:{confirm: "Are you sure you want to delete \"#{@item.name}\"?"} %></p>

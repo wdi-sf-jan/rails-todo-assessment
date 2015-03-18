@@ -25,9 +25,19 @@ class ListsController < ApplicationController
   end
 
   def update
+    list = List.find(params[:id])
+    list.update_attributes list_params
+    if list.save
+      redirect_to list_path(list)
+    else
+      redirect_to :back, notice: "valid name required"
+    end
   end
 
   def destroy
+    list = List.find(params[:id])
+    list.destroy
+    redirect_to lists_path, notice: "#{list.name} has been deleted"
   end
 
 private
