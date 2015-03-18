@@ -4,11 +4,43 @@ class TodolistsController < ApplicationController
   end
 
   def show
+    @todolist = Todolist.find params[:id]
   end
 
   def new
+    @todolist = Todolist.new
   end
 
   def edit
+    @todolist = Todolist.find params[:id]
   end
+
+  def create 
+    @todolist = Todolist.new todolist_params
+    if @todolist.save
+      redirect_to todolists_path(@todolist)
+    else
+      render :new 
+    end
+  end
+
+  def update
+    @todolist = Todolist.find params[:id]
+    if @todolist.update_attributes todolist_params
+      redirect_to todolist_path(@todolist)
+    else 
+      render :edit
+    end
+  end
+
+  def destroy
+    todolist = Todolist.find params[:id]
+    todolist.destroy
+    redirect_to todolists_path
+  end
+
+  private
+    def todolist_params
+      params.require(:todolist).permit(:title)
+    end
 end
