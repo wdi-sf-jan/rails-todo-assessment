@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'todolists/index'
+
+  get 'todolists/show'
+
+  get 'todolists/new'
+
+  get 'todolists/edit'
+
+  get 'todos/index'
+
+  get 'todos/show'
+
+  get 'todos/new'
+
+  get 'todos/edit'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
