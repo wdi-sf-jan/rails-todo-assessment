@@ -1,2 +1,19 @@
-<h1>Todolists#show</h1>
-<p>Find me in app/views/todolists/show.html.erb</p>
+<h1><%= @todolist.title %></h1>
+
+<p>
+  <ol>
+    <% @todolist.todos.each do |todo| %>
+      <li>
+        <%= link_to todo.item, todo_path(todo) %>
+      </li>
+    <% end %>
+  </ol>
+</p>
+
+<p>
+  <%= link_to "Add a todo", new_todolist_todo_path(@todolist) %>
+</p>
+
+<p>
+  <%= link_to "Edit Todolist", edit_todolist_path(@todolist) %>
+</p>
