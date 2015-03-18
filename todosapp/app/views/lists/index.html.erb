@@ -1,0 +1,10 @@
+
+
+<h1>All Todo Lists</h1>
+<p>Create a new your list <%= link_to "here", new_list_path %></p>
+
+<ul>
+  <% @lists.each do |list| %>
+  <li><%= list.name %> <%= link_to "show", list %> <%= link_to "delete", list_path(list), method: :delete, data:{confirm: "Are you sure you want to delete \"#{list.name}\"?"} %></li>
+  <% end %>
+</ul>

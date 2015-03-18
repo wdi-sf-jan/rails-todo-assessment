@@ -1,0 +1,16 @@
+<%= link_to "Home", lists_path %>
+
+<h1><%= @list.name %> <small></small></h1>
+<p>Edit list <%= link_to "here", edit_list_path(@list) %></p>
+
+<% if @items.any? %>
+<ul>
+<% @items.each do |item| %>
+<li><%= item.name %> <%= link_to "show", item_path(item) %> | <%= link_to "Delete", item_path(item), method: :Delete, data:{confirm: "Are you sure you want to delete \"#{item.name}\"?"} %></li>
+<% end %>
+<p><%= link_to "Add Item", new_list_item_path(@list) %></p>
+</ul>
+<% else %>
+<p>Please add items to your list <%= link_to "here", new_list_item_path(@list) %></p>
+<% end %>
+
